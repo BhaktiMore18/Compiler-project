@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Translator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-gradient-to-r from-blue-400 to-blue-600 flex flex-col items-center justify-center min-h-screen p-4"
+  >
+    <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-xl">
+      <h1 class="text-3xl font-bold mb-6 text-center text-gray-800">
+        High-Level Code to Assembly Translator
+      </h1>
+
+      <textarea
+        id="highLevelCode"
+        class="w-full p-4 border border-gray-300 rounded-md mb-4 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        rows="10"
+        placeholder="Enter your high-level code here..."
+      ></textarea>
+
+      <button
+        id="translateButton"
+        onclick="translateCode()"
+        class="w-full bg-blue-600 text-white p-3 rounded-md hover:bg-blue-700 transition duration-200"
+      >
+        Translate Code
+      </button>
+
+      <h2 class="text-xl font-semibold mt-6 text-gray-800">
+        Generated Assembly Code
+      </h2>
+      <pre
+        id="assemblyCode"
+        class="bg-gray-200 p-4 rounded-md mb-4 overflow-x-auto"
+      ></pre>
+
+      <h2 class="text-xl font-semibold mt-6 text-gray-800">Execution Output</h2>
+      <pre
+        id="executionOutput"
+        class="bg-gray-200 p-4 rounded-md overflow-x-auto"
+      ></pre>
+
+      <footer class="mt-6 text-center text-gray-600 text-sm">
+        <p>Compiler Designing project 2024</p>
+      </footer>
+    </div>
+
+    <script src="cmp.js"></script>
+  </body>
+</html>
